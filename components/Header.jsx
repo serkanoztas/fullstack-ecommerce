@@ -1,11 +1,16 @@
 import { assets } from '@/assets/assets'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
+import { PiAmazonLogoFill } from "react-icons/pi";
 
 const Header = () => {
     return (
         <div className='flex flex-row items-center justify-around px-4 py-4 border-b w-full'>
-            <Image src={assets.logo} alt='' />
+            <Link href="/" className='flex flex-row items-center gap-2'>
+                <PiAmazonLogoFill size={40} className='cursor-pointer' />
+                <p className='font-semibold '>MyEcommerce</p>
+            </Link>
             <div className='hidden md:flex flex-row gap-4 items-center justify-between'>
                 <p>Home</p>
                 <p>Shop</p>

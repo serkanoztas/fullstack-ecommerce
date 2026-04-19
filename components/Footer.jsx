@@ -1,6 +1,7 @@
 import { assets } from '@/assets/assets'
 import Image from 'next/image'
 import React from 'react'
+import { PiAmazonLogoFill } from "react-icons/pi";
 
 const Footer = () => {
     return (
@@ -8,7 +9,7 @@ const Footer = () => {
             <div className='my-10 border-b-1 border-gray-500 py-12'>
                 <div className='flex flex-row items-center justify-around px-12'>
                     <div className='flex flex-col'>
-                        <Image src={assets.logo} alt='' />
+                        <PiAmazonLogoFill size={60}/>
                     </div>
                     <div>
                         <h1 className='font-semibold mb-6 text-lg'>Company</h1>

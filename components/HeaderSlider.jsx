@@ -56,10 +56,10 @@ const HeaderSlider = () => {
                             className="flex flex-col-reverse md:flex-row items-center justify-between bg-[#E6E9F2] py-8 md:px-14 px-5 mt-6 rounded-sm min-w-full"
                         >
                             <div className='flex flex-col  gap-6'>
-                                <p className='text-orange-500 font-semibold'>{slide.offer}</p>
+                                <p className='text-red-500 font-semibold'>{slide.offer}</p>
                                 <h1 className='font-bold text-2xl'>{slide.title}</h1>
                                 <div className='flex flex-row gap-4'>
-                                    <button className='bg-orange-500 text-white text-sm rounded-xl py-2 px-4'>{slide.buttonText1}</button>
+                                    <button className='bg-red-500 text-white text-sm rounded-xl py-2 px-4'>{slide.buttonText1}</button>
                                     <button>{slide.buttonText2}</button>
                                     <Image src={assets.arrow_icon} alt='' />
                                 </div>

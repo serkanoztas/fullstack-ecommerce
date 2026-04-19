@@ -2,12 +2,14 @@
 import { useAppContext } from '@/context/AppContext'
 import React from 'react'
 import ProductCard from './ProductCard';
+import Link from 'next/link';
 
 
 const HomeProducts = () => {
     const { products, router } = useAppContext();
     const context = useAppContext();
-    console.log(context);
+
+
     return (
         <div className='flex flex-col gap-3'>
             <p className='font-semibold text-lg mx-auto my-12'>Popular Products</p>
@@ -16,7 +18,9 @@ const HomeProducts = () => {
                     products.map((products, index) => <ProductCard key={index} products={products} />)
                 }
             </div>
-            <button className='mx-auto mt-12 border border-1 rounded-md py-4 px-12 max-w-[300px] text-md text-gray-500 cursor-pointer font-semibold hover:bg-gray-100 transition-colors duration-300'>See More</button>
+            <Link href="/all-products" className='mx-auto'>
+                <button className='mx-auto mt-12 border border-1 rounded-md py-4 px-12 max-w-[300px] text-md text-gray-500 cursor-pointer font-semibold hover:bg-gray-100 transition-colors duration-300'>See More</button>
+            </Link>
         </div>
     )
 }
