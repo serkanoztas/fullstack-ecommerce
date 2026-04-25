@@ -23,7 +23,7 @@ export const syncUserCreation = inngest.createFunction(
         await User.create(userData)
     }
 )
-
+//User Update
 export const syncUserUpdation = inngest.createFunction(
     {
         id: "update-user-from-clerk"
@@ -41,7 +41,7 @@ export const syncUserUpdation = inngest.createFunction(
         await User.findByIdAndUpdate(id, userData)
     }
 )
-
+//User Delete
 export const syncUserDeletion = inngest.createFunction(
     {
         id: "delete-user-with-clerk"
@@ -54,4 +54,3 @@ export const syncUserDeletion = inngest.createFunction(
     }
 )
 
-//User Update

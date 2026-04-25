@@ -17,6 +17,7 @@ async function connectDB() {
 
         cached.promise = mongoose.connect(`${process.env.MONGODB_URL}/E-commerce`, opts).then(mongoose => {
             return mongoose
+            console.log("DB connected")
         }
         )
     }
